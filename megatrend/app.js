@@ -603,14 +603,19 @@ function initPathScroll() {
      — animated using a CSS custom property
   ───────────────────────────────────────────── */
   } else if (isMobile && timeline) {
-    // Reset x offsets on mobile (all come from left)
-    steps.forEach(step => gsap.set(step, { x: -10 }));
+    // Reset x offsets on mobile (all come from left), small lift for smooth entry
+    steps.forEach(step => gsap.set(step, { x: -10, y: 12 }));
 
+    // Pin the section so the path stays in one place on screen while all
+    // 5 steps reveal one-by-one and remain visible together.
     ScrollTrigger.create({
       trigger: section,
-      start: 'top 40%',
-      end: 'bottom 65%',
-      scrub: 0.4,
+      start: 'center center',
+      end: '+=' + Math.round(window.innerHeight * 1.1),
+      scrub: 0.5,
+      pin: true,
+      pinSpacing: true,
+      anticipatePin: 1,
       onUpdate(self) {
         const p = self.progress;
 
@@ -618,7 +623,7 @@ function initPathScroll() {
         timeline.style.setProperty('--line-progress', (p * 100) + '%');
 
         // Thresholds evenly spaced for 5 steps
-        const thresholds = [0.1, 0.28, 0.46, 0.64, 0.82];
+        const thresholds = [0.06, 0.24, 0.42, 0.6, 0.78];
         steps.forEach((step, i) => {
           const active = p >= thresholds[i];
           const circle = step.querySelector('.process-step-circle');
@@ -626,21 +631,21 @@ function initPathScroll() {
           const label  = step.querySelector('.process-step-card p');
 
           if (active) {
-            gsap.to(step,   { opacity: 1, x: 0, duration: 0.3, ease: 'power2.out', overwrite: 'auto' });
+            gsap.to(step,   { opacity: 1, x: 0, y: 0, duration: 0.5, ease: 'power2.out', overwrite: 'auto' });
             gsap.to(circle, { borderColor: 'rgba(255,255,255,0.9)',
                                boxShadow: '0 0 12px rgba(255,255,255,0.55), 0 0 28px rgba(255,255,255,0.25)',
-                               duration: 0.3, overwrite: 'auto' });
+                               duration: 0.4, overwrite: 'auto' });
             gsap.to(num,    { color: '#ffffff',
                                textShadow: '0 0 10px rgba(255,255,255,0.9)',
-                               duration: 0.3, overwrite: 'auto' });
+                               duration: 0.4, overwrite: 'auto' });
             gsap.to(label,  { color: '#ffffff',
                                textShadow: '0 0 14px rgba(255,255,255,0.55)',
-                               duration: 0.3, overwrite: 'auto' });
+                               duration: 0.4, overwrite: 'auto' });
           } else {
-            gsap.to(step,   { opacity: 0, x: -10, duration: 0.2, overwrite: 'auto' });
-            gsap.to(circle, { borderColor: 'rgba(255,255,255,0.15)', boxShadow: 'none', duration: 0.2, overwrite: 'auto' });
-            gsap.to(num,    { color: 'rgba(255,255,255,0.4)', textShadow: 'none', duration: 0.2, overwrite: 'auto' });
-            gsap.to(label,  { color: 'rgba(255,255,255,0.25)', textShadow: 'none', duration: 0.2, overwrite: 'auto' });
+            gsap.to(step,   { opacity: 0, x: -10, y: 12, duration: 0.3, overwrite: 'auto' });
+            gsap.to(circle, { borderColor: 'rgba(255,255,255,0.15)', boxShadow: 'none', duration: 0.3, overwrite: 'auto' });
+            gsap.to(num,    { color: 'rgba(255,255,255,0.4)', textShadow: 'none', duration: 0.3, overwrite: 'auto' });
+            gsap.to(label,  { color: 'rgba(255,255,255,0.25)', textShadow: 'none', duration: 0.3, overwrite: 'auto' });
           }
         });
       }

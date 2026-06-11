@@ -1031,23 +1031,31 @@ html, body {
     padding: 80px 0 60px;
   }
 
+  /* Compact, pinned-in-place timeline so all 5 steps stay visible together */
   .process-timeline {
     min-height: auto;
     display: flex;
     flex-direction: column;
+    margin-top: 32px;
+    padding: 0 20px;
+    will-change: transform;
   }
 
   .process-step {
-    width: calc(100% - 40px);
-    margin-bottom: 60px;
-    margin-left: 40px;
+    width: calc(100% - 32px);
+    margin-bottom: 22px;
+    margin-left: 32px;
     flex-direction: row;
-    gap: 24px;
+    gap: 18px;
+  }
+
+  .process-step:last-child {
+    margin-bottom: 0;
   }
 
   .process-step--left,
   .process-step--right {
-    margin-left: 40px;
+    margin-left: 32px;
     margin-right: 0;
     flex-direction: row;
     text-align: left;
