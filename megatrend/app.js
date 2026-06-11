@@ -10,11 +10,11 @@ const translations = {
     navAbout: 'КОИ СМЕ НИЕ',
     navContact: 'КОНТАКТИ',
     heroSubtitle: 'ПЕРФОРМЪНС МАРКЕТИНГ АГЕНЦИЯ',
-    heroLine1: 'ОНЛАЙН РЕКЛАМИ,',
+    heroLine1: 'ОНЛАЙН РЕКЛАМИ',
     heroLine2: 'MEGATREND.',
     heroLine3: 'КОИТО ПРАВЯТ',
-    heroLine4: 'МЕГА МНОГО ПРОДАЖБИ.',
-    heroDesc: 'Изграждаме дигитални кампании, базирани на реални данни, мащабираме реклами в Meta, Google и TikTok и помагаме на брандовете да изпреварят трендовете.',
+    heroLine4: 'МЕГА МНОГО ПРОДАЖБИ',
+    heroDesc: 'Изграждаме дигитални кампании, базирани на реални данни, мащабираме реклами в Meta, Google и TikTok и помаг[...]
     heroCta: 'СВЪРЖИ СЕ',
     caseCta: 'КЪМ КЕЙС СТЪДИТО',
     servicesTitle1: 'КАКВО',
@@ -38,14 +38,14 @@ const translations = {
     test2text: 'Най-накрая агенция, която не просто пуска реклами, а мисли като собственик на бизнеса. ROAS 5.2x за Q1.',
     test2name: 'Мария Георгиева',
     test2role: 'Founder, Home & Style',
-    test3text: 'От първата седмица видяхме разлика. Стратегия, криейтив и постоянна оптимизация — точно това ни трябваше.',
+    test3text: 'От първата седмица видяхме разлика. Стратегия, криейтив и постоянна оптимизация — точно това ни т[...]
     test3name: 'Димитър Стоянов',
     test3role: 'Marketing Director, TechStore BG',
     aboutTitle1: 'КОИ',
     aboutTitle2: 'СМЕ НИЕ',
-    aboutText: 'Performance екип за онлайн магазини, заседнали на плато. Извеждаме бизнеси от 10–20K евро оборот с проактивна ежедневна работа, не outsourced ads, а система за растеж. 150+ магазина. 40M+ приходи. Без компромис с резултатите.',
+    aboutText: 'Performance екип за онлайн магазини, заседнали на плато. Извеждаме бизнеси от 10–20K евро оборот с проакти[...]
     contactHeading: 'СВЪРЖИ СЕ С НАС',
-    contactDesc: 'Не работим с всеки. Работим само с брандове, които са готови да инвестират, да тестват агресивно и да скалират сериозно. Ако това си ти – свържи се с нас.',
+    contactDesc: 'Не работим с всеки. Работим само с брандове, които са готови да инвестират, да тестват агресивно и [...]
     contactEmailLabel: 'ПИШИ НИ',
     contactPhoneLabel: 'ОБАДИ СЕ',
     formName: 'Име',
@@ -53,7 +53,7 @@ const translations = {
     formWebsite: 'Уебсайт',
     formOptional: '(опционално)',
     formMsg: 'Съобщение',
-    formBudget: 'Желан рекламен бюджет (€)',
+    formBudget: 'Желан месечен бюджет за реклама (€)',
     formService: 'Избери услуга',
     formSubmit: 'ИЗПРАТИ ЗАПИТВАНЕ',
     footerCopy: '© 2026 Megatrend Digital. Всички права запазени.\n100% независима перформънс маркетинг агенция.',
@@ -68,10 +68,10 @@ const translations = {
     navAbout: 'KOI SME NIE',
     navContact: 'KONTAKTI',
     heroSubtitle: 'PERFORMANS MARKETING AGENCIYA',
-    heroLine1: 'ONLAYN REKLAMI,',
+    heroLine1: 'ONLAYN REKLAMI',
     heroLine2: 'MEGATREND.',
     heroLine3: 'KOITO PRAVYAT',
-    heroLine4: 'MEGA MNOGO PRODAZHBI.',
+    heroLine4: 'MEGA MNOGO PRODAZHBI',
     heroDesc: 'Izgrazhdame digitalni kampanii, bazirani na realni danni, mashtabirame reklami v Meta, Google i TikTok i pomagame na brandovete da izprevaryat trendovete.',
     heroCta: 'SVRZETE SE',
     caseCta: 'KYM KEYS STUDITO',
@@ -101,7 +101,7 @@ const translations = {
     test3role: 'Marketing Director, TechStore BG',
     aboutTitle1: 'KOI',
     aboutTitle2: 'SME NIE',
-    aboutText: 'Performance ekip za onlain magazini, zasednali na plato. Izvezhdame biznesi ot 10–20K evro oborot s proaktivna ezhednevena rabota, ne outsourced ads, a sistema za rastezh. 150+ magazina. 40M+ prihodi. Bez kompromis s rezultatite.',
+    aboutText: 'Performance ekip za onlain magazini, zasednali na plato. Izvezhdame biznesi ot 10–20K evro oborot s proaktivna ezhednevena rabota, ne outsourced ads, a sistema za rastezh. 150+ [...]
     contactHeading: 'SVRZETE SE S NAS',
     contactDesc: 'Ne rabotim s vseki. Rabotim samo s brandove, koito sa gotovi da investirat, da testvat agresivno i da skalirat seriozno. Ako tova si ti – svurzhi se s nas.',
     contactEmailLabel: 'PISHETE NI',
@@ -650,7 +650,7 @@ function initPathScroll() {
 
 function initStatsCounters() {
   const stats = [
-    { id: 'stat1', target: 4.7, prefix: '+', suffix: 'x', decimals: 1 },
+    { id: 'stat1', target: 4.7, prefix: '~ ', suffix: 'x', decimals: 1 },
     { id: 'stat2', target: 87, prefix: '', suffix: '%' },
     { id: 'stat3', target: 40, prefix: '', suffix: 'М+' },
     { id: 'stat4', target: 200, prefix: '', suffix: '+' }
